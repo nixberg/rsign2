@@ -1,0 +1,29 @@
+name: rsign
+base: core18
+version: "0.5.4"
+summary: Sign files and verify signatures with Minisign
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+grade: stable
+confinement: strict
+
+apps:
+  rsign:
+    command: rsign.sh
+    plugs:
+      - home
+  key:
+    command: key.sh
+
+parts:
+  rsign:
+    plugin: rust
+    source: .
+    source-tag: "0.5.4"
+  launchers:
+    plugin: dump
+    source: snap/local

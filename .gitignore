@@ -6,3 +6,8 @@
 *.minisig
 Cargo.lock
 testfile.txt
+
+parts/
+stage/
+prime/
+*.snap
